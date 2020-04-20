@@ -28,7 +28,7 @@ class CreateQuoteRequest extends FormRequest
         return [
             'text' => 'required|min:5|max:4096',
             'author_name' => 'required|string|min:3|max:255',
-            'tag_ids' => 'required|array',
+            'tag_ids' => 'required|array|max:3',
             'tag_ids.*' => 'required|int|exists:tags,id'
         ];
     }

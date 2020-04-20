@@ -15,8 +15,9 @@
             <br>
             <label>
                 <span>Укажите теги:</span>
-                <multiselect v-model="tags" :show-labels="false" :options="allTags" :multiple="true" :allow-empty="false" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Выберите тег" label="name" track-by="name" :max-height="165">
+                <multiselect v-model="tags" :max="3" :show-labels="false" :options="allTags" :multiple="true" :allow-empty="false" :close-on-select="false" :clear-on-select="false" :preserve-search="true" placeholder="Выберите тег" label="name" track-by="name" :max-height="165">
                     <template slot="selection" slot-scope="{ values, search, isOpen }"><span class="multiselect__single" v-if="values.length > 1 && !isOpen">{{ values.length }} тега выбрано</span><span v-else-if="values.length === 1 && !isOpen">{{ values[0].name }}</span></template>
+                    <span slot="maxElements">Больше тегов выбрать нельзя</span>
                 </multiselect>
             </label>
             <br>

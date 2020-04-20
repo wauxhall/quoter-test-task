@@ -38,6 +38,7 @@ axios.interceptors.response.use(function (config) {
     store.commit("loading", false);
     return config;
 }, function (error) {
+    store.commit("loading", false);
     return Promise.reject(error);
 });
 
