@@ -14,5 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    if(config('common.disable_app_browser_cache')) {
+        return response()
+            ->view('index')
+            ->header('Expires', 'Mon, 1 Jan 1970 00:00:00 GMT')
+            ->header('Pragma', 'no-cache')
+            ->header('Cache-Control', 'no-cache');
+    } else {
+        return view('index');
+    }
 });
