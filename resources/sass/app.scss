@@ -1,0 +1,64 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Font-awesome
+@import '~@fortawesome/fontawesome-free/css/all.min.css';
+
+// Loader
+@import '~vue-loading-overlay/dist/vue-loading.css';
+
+.container {
+    max-width: 1100px;
+}
+.mr-icon {
+    margin-right: 5px;
+}
+.ml-icon {
+    margin-left: 5px;
+}
+.fa, .fas, .far {
+    color: #3490dc;
+    font-size: 0.8em;
+}
+.vue-notification-wrapper {
+    margin: 5px !important;
+
+    .notification-title {
+        font-size: 16px;
+    }
+    .notification-content {
+        font-size: 14px;
+    }
+}
+.btn.regular-btn {
+    border-radius: 30px;
+    padding: 0.4rem 1.5rem !important;
+    font-size: 16px !important;
+}
+.navbar-brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    font-size: 2rem;
+    text-shadow: 1px 1px #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.modal-wrapper {
+    padding: 1.5rem;
+
+    label {
+        width: 100%;
+        margin-bottom: 20px !important;
+
+        & > span {
+            display: inline-block;
+            margin-bottom: 3px;
+        }
+    }
+}
